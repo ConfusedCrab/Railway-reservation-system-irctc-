@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PNR Status Enquiry</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #c0392b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+   h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #c0392b;
+}
+
+
+    input[type="text"] {
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background-color: #e74c3c;
+      color: white;
+      font-size: 18px;
+      padding: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c0392b;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      text-decoration: none;
+      color: #e74c3c;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #c0392b;
+    }
+
+    .contant {
+      max-width: 900px;
+      margin: 60px auto;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contant h2 {
+      text-align: start;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: black;
+    }
+    .contant h3 {
+      text-align: start;
+      margin-bottom: 30px;
+    }
+
+    .contant p {
+      margin-bottom: 15px;
+    }
+
+    /* for table  */
+    #tableh2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Indian Rail Features</h1>
+  </header>
+
+  <h2>Check Your PNR Status</h2>
+  <input type="text" placeholder="Enter 10-digit PNR Number" />
+  <button>Check PNR</button>
+
+  <a href="http://127.0.0.1:5500/index.html" class="back-link">← Back to Home</a>
+  </div>
+
+  <section class="contant">
+    <h2 id="pnr-title">What is PNR?</h2>
+
+    <p>​PNR is short name for 'Passenger Name Record'. It is a record in the database of Indian Railways
+      against which the journey details for a passenger, or a group of passengers are stored. Centre
+      for Railway Information Systems (CRIS) also maintains information like current PNR status of the
+      passengers, availability of berths in all classes for the next 60 days and static enquiries like
+      Train Between Important Stations, Reservations Rules, Fares, Refund, and Rules etc When a
+      reserved railway ticket is booked for a train in Indian Railways, all the details of passengers
+      are stored in relational database of centralized reservation system. These details are
+      associated with a unique ten digit number. This reference number is called PNR. PNR number is
+      generally printed at the top left corner of the printed tickets. In case of the E – Ticket, it
+      is mentioned at top in separate cell. Passenger's personal information like name, age, gender
+      etc. is saved in the database against this reference number. It includes columns to store
+      booking status and current status of the ticket. As we know every train has limited number of
+      seats, sometime one may not get a confirmed reserved ticket. The current status of such a
+      waitlist (W/L) ticket changes when there is any availability of reserved seats due to
+      cancellation. This new current reservation status is generally known as PNR status.
+    </p>
+
+
+    <h2>What does a PNR Number Generated Explain?</h2>
+      <p>A PNR (Passenger Name Record) contains key details about your train journey, including:</p>
+
+      <ol>
+        <li >Passenger Details: Name, Age, Sex, Birth Preference.</li>
+        <li >Ticket Details: Train Number, Date of Journey, Origin/Source Station, Destination
+          Station, Boarding Station, Class, Berth, Quota.</li>
+        <li>Fare, Transaction Type and Payment Details.</li>
+        <li >The first three digits tell us from which Passenger Reservation System or PRS the
+          ticket has been booked.</li>
+        <li>The first digit depends on the train's zone w.r.t. its starting station.</li>
+        <li>Zonal Codes: 1 (SCR Secunderabad PRS); 2, 3 (NR, NCR, NWR, NER New Delhi PRS); 4, 5
+          (SR, SWR, SCR Chennai PRS); 6, 7 (NFR, ECR, ER, ECoR, SER, SECR Calcutta PRS); 8, 9 (CR, WCR, WR Mumbai PRS).
+        </li>
+        <li >The last seven digits are randomly generated numbers that provide a unique identity
+          to the PNR number but do not convey any information about the ticket or the journey.</li>
+      </ol>
+
+
+        <h2 id ="tableh2">Types of IRCTC PNR Status</h2>
+    
+        <p>
+            When you receive your PNR number, it includes a status that indicates the current state of your train ticket booking. Indian Railways uses various abbreviations to represent these train PNR status, which can sometimes be confusing. To help you, here is a list of different types of IRCTC PNR status, their common abbreviations, and their meanings.
+        </p>
+    
+        <table>
+            <tbody>
+                <tr>
+                    <td><strong>CNF</strong></td>
+                    <td>The train ticket status shows as ‘CNF’ when seats are confirmed.</td>
+                </tr>
+                <tr>
+                    <td><strong>RAC</strong></td>
+                    <td>It stands for ‘Reservation Against Cancellation’ meaning the train ticket has a confirmed seat but waitlisted berth. If tickets are booked under RAC status, the allocated berth is split into two seats.</td>
+                </tr>
+                <tr>
+                    <td><strong>CAN</strong></td>
+                    <td>It means ‘Cancelled’ i.e. the ticket has been cancelled.</td>
+                </tr>
+                <tr>
+                    <td><strong>WL</strong></td>
+                    <td>‘Waiting List’ is a railway PNR status that gets confirmed only if passengers who booked before you on the same train cancel their tickets.</td>
+                </tr>
+                <tr>
+                    <td><strong>GNWL</strong></td>
+                    <td>It stands for ‘General Waiting List’. The probability of this IRCTC PNR status getting confirmed is very high.</td>
+                </tr>
+                <tr>
+                    <td><strong>PQWL</strong></td>
+                    <td>‘Pooled Quota Waiting List’ status is given to passengers travelling from the origin station to a station before the last station, from an intermediate station to the destination station, or between any two intermediate stations.</td>
+                </tr>
+                <tr>
+                    <td><strong>RLWL</strong></td>
+                    <td>‘Remote Location Waiting List’ refers to a ticket issued to a passenger for intermediate stations (between the origin and terminating stations). These intermediate stations are typically the most important towns along the route.</td>
+                </tr>
+                <tr>
+                    <td><strong>TQWL</strong></td>
+                    <td>It refers to the ‘Tatkal Quota Waiting List,’ which applies to tatkal ticket bookings. Tickets under the Tatkal Quota are confirmed directly without going through RAC. However, during chart preparation, GNWL (General Waiting List) is given priority over TQWL (Tatkal Quota Waiting List).</td>
+                </tr>
+                <tr>
+                    <td><strong>NOSB</strong></td>
+                    <td>It stands for ‘No Seat Berth,’ which indicates that the journey is permitted without a seat. This train PNR status is designated for child passengers under the age of 11 years.</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <p>
+            If you cannot get a confirmed ticket, check <a href="seat.html">seat availability</a> on other trains.
+        </p>
+    </section>
+    
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Station Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #e74c3c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #e74c3c;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background-color: #e74c3c;
+      color: white;
+      font-size: 18px;
+      padding: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c0392b;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      text-decoration: none;
+      color: #e74c3c;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #c0392b;
+    }
+
+    .contant {
+      max-width: 900px;
+      margin: 60px auto;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contant h2 {
+      text-align: start;
+      margin-bottom: 30px;
+      color: black;
+
+    }
+
+    .contant p {
+      margin-bottom: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-family: system-ui, sans-serif;
+      font-size: 16px;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+    }
+
+    thead {
+      background-color: #333;
+      color: #fff;
+    }
+
+    thead th {
+      padding: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    td,
+    th {
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    tfoot {
+      background-color: #f3f3f3;
+      text-align: center;
+    }
+
+    tfoot button {
+      background-color: #0077cc;
+      color: #fff;
+      padding: 10px 18px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    tfoot button:hover {
+      background-color: #005fa3;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Indian Rail Features</h1>
+  </header>
+  <div>
+    <h2>Search Station Details</h2>
+    <input type="text" placeholder="Enter Station Code or Name" />
+    <button>Search Station</button>
+
+
+    <a href="http://127.0.0.1:5500/index.html" class="back-link">← Back to Home</a>
+  </div>
+
+  <section class="contant">
+    <div>
+      <h2>Train Stations and Station Codes</h2>
+
+      <p>
+        Indian Railways is undoubtedly one of the largest railway networks in the world. It connects cities, towns, and
+        villages from all corners of India, providing an extensive connection that allows passengers to travel
+        conveniently between different locations.
+      </p>
+
+      <p>
+        Railways not only offer convenience but are also cost-effective and easy to book. It's no wonder that travellers
+        from across the country rely on it for their journeys.
+      </p>
+
+      <p>
+        Consequently, the list of Indian Railway stations is vast and can be overwhelming, presenting a challenge for
+        both experienced travellers and newcomers when it comes to selecting the right train stations for their journey.
+      </p>
+
+      <p>
+        Even though the Indian Railway Enquiry Service is accessible for assistance, it can become confusing at times,
+        particularly if you are not familiar with station codes. At such a juncture, Railway station code search becomes
+        tough.
+      </p>
+
+      <p>
+        Acknowledging this problem, ixigo has developed a simple list of railway stations with names that not only
+        provides data on trains between major stations but also sheds light on information about all trains operating
+        along India's railway routes at any given time.
+      </p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Station Code</th>
+          <th>Station Name</th>
+          <th>City</th>
+          <th>Trains Passing Through</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SDNR</td>
+          <td><a href="/train-stations/seydunganallur-sdnr-railway-station">Seydunganallur</a></td>
+          <td>Seydunganallur</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>BSE</td>
+          <td><a href="/train-stations/badshahpur-bse-railway-station">Badshahpur</a></td>
+          <td>Badshahpur</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>BSB</td>
+          <td><a href="/train-stations/varanasi-jn-bsb-railway-station">Varanasi Jn</a></td>
+          <td>Banaras</td>
+          <td>270</td>
+        </tr>
+        <tr>
+          <td>APD</td>
+          <td><a href="/train-stations/alipur-duar-apd-railway-station">Alipur Duar</a></td>
+          <td>Alipur Duar</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>BSC</td>
+          <td><a href="/train-stations/bulandshahr-bsc-railway-station">Bulandshahr</a></td>
+          <td>Bulandshahr</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>BSP</td>
+          <td><a href="/train-stations/bilaspur-jn-bsp-railway-station">Bilaspur Jn</a></td>
+          <td>Bilaspur</td>
+          <td>174</td>
+        </tr>
+        <tr>
+          <td>JTI</td>
+          <td><a href="/train-stations/jaithari-jti-railway-station">Jaithari</a></td>
+          <td>Jaithari</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>JTJ</td>
+          <td><a href="/train-stations/jolarpettai-jtj-railway-station">Jolarpettai</a></td>
+          <td>Jolarpettai</td>
+          <td>187</td>
+        </tr>
+        <tr>
+          <td>THVM</td>
+          <td><a href="/train-stations/thivim-thvm-railway-station">Thivim</a></td>
+          <td>Goa</td>
+          <td>52</td>
+        </tr>
+        <tr>
+          <td>BSL</td>
+          <td><a href="/train-stations/bhusaval-jn-bsl-railway-station">Bhusaval Jn</a></td>
+          <td>Bhusawal</td>
+          <td>351</td>
+        </tr>
+        <tr>
+          <td>GCH</td>
+          <td><a href="/train-stations/gachhipura-gch-railway-station">Gachhipura</a></td>
+          <td>Gachhipura</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>APL</td>
+          <td><a href="/train-stations/appikatla-apl-railway-station">Appikatla</a></td>
+          <td>Appikatla</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>ATNR</td>
+          <td><a href="/train-stations/awatarnagar-atnr-railway-station">Awatarnagar</a></td>
+          <td>Saran</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>JSM</td>
+          <td><a href="/train-stations/jaisalmer-jsm-railway-station">Jaisalmer</a></td>
+          <td>Jaisalmer</td>
+          <td>19</td>
+        </tr>
+        <tr class="extra-row hidden">
+          <td>BRS</td>
+          <td><a href="/train-stations/birsinghpur-brs-railway-station">Birsinghpur</a></td>
+          <td>Umaria</td>
+          <td>27</td>
+        </tr>
+        <tr class="extra-row hidden">
+          <td>BRR</td>
+          <td><a href="/train-stations/barakar-brr-railway-station">Barakar</a></td>
+          <td>Barakar</td>
+          <td>36</td>
+        </tr>
+        <tr class="extra-row hidden">
+          <td>BRY</td>
+          <td><a href="/train-stations/bareilly-bry-railway-station">Bareilly</a></td>
+          <td>Bareilly</td>
+          <td>18</td>
+        </tr>
+        <tr class="extra-row hidden">
+          <td>BRE</td>
+          <td><a href="/train-stations/bharwari-bre-railway-station">Bharwari</a></td>
+          <td>Bharwari</td>
+          <td>14</td>
+        </tr>
+        <tr class="extra-row hidden">
+          <td>GDB</td>
+          <td><a href="/train-stations/giddarbaha-gdb-railway-station">Giddarbaha</a></td>
+          <td>Giddarbaha</td>
+          <td>25</td>
+        </tr>
+        <tr class="extra-row hidden">
+          <td>BRG</td>
+          <td><a href="/train-stations/bargarh-brg-railway-station">Bargarh</a></td>
+          <td>Bargarh</td>
+          <td>8</td>
+        </tr>
+        <tr class="extra-row hidden">
+          <td>BRH</td>
+          <td><a href="/train-stations/baikunthpur-rd-brh-railway-station">Baikunthpur Rd</a></td>
+          <td>Baikunthpur</td>
+          <td>8</td>
+        </tr>
+        <tr class="extra-row hidden">
+          <td>JUC</td>
+          <td><a href="/train-stations/jalandhar-city-juc-railway-station">Jalandhar City</a></td>
+          <td>Jalandhar</td>
+          <td>168</td>
+        </tr>
+        <tr class="extra-row hidden">
+          <td>BRC</td>
+          <td><a href="/train-stations/vadodara-jn-brc-railway-station">Vadodara Jn</a></td>
+          <td>Baroda</td>
+          <td>395</td>
+        </tr>
+        <tr class="extra-row hidden">
+          <td>BRD</td>
+          <td><a href="/train-stations/bhandara-road-brd-railway-station">Bhandara Road</a></td>
+          <td>Bhandara</td>
+          <td>47</td>
+        </tr>
+        <tr class="extra-row hidden">
+          <td>GDA</td>
+          <td><a href="/train-stations/godhra-jn-gda-railway-station">Godhra Jn</a></td>
+          <td>Godhra</td>
+          <td>85</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">
+            <button class="train-station-page__view-more-btn">View More Stations</button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div>
+      <div>
+        <div>
+          <h2>Why Do You Need a Railway Station List?</h2>
+          <p>
+            As millions of commuters use the Railway Enquiry System daily, getting timely information can be
+            challenging, often leading to long wait times. The Indian Railway Stations List allows you to swiftly find
+            answers to your questions without the need for assistance.
+          </p>
+          <p>
+            There’s an extensive network of railway stations in India. In such a scenario, identifying the specific
+            trains serving a particular station can be challenging. However, with a station list, you can effortlessly
+            select trains that pass through your desired station.
+          </p>
+          <p>
+            When you are booking a train ticket online, it's essential to know the railway station codes for both your
+            departure point and destination. You can conveniently access all railway station codes within the station
+            list.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <script>
+    document.querySelector('.train-station-page__view-more-btn')
+      .addEventListener('click', function () {
+        const hiddenRows = document.querySelectorAll('.extra-row');
+        hiddenRows.forEach(row => row.classList.remove('hidden'));
+        this.style.display = 'none'; // Hide the button after showing rows
+      });
+  </script>
+
+</body>
+
+</html>

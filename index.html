@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey</title>
+
+<link rel="icon" type="image/png" sizes="32x32" href="logo/favicon1-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#Offers"><i class="hgi hgi-stroke hgi-discount"></i>Offers</a></li>
+                <li><a href="#CustomerService"><i class="hgi hgi-stroke hgi-customerservice"></i>Customer Service</a>
+                </li>
+                <li><a href="#" id="loginBtn"><i class="hgi hgi-stroke hgi-user-circle-02"></i>Sign up/Log in</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- for login and signup -->
+    <div id="authSidebar" class="sidebar">
+        <div class="sidebar-content">
+            <span class="close-btn" onclick="closeSidebar()">&times;</span>
+            <div id="loginForm" class="form-section">
+                <h2>Login</h2>
+                <input type="text" placeholder="Username" />
+                <input type="password" placeholder="Password" />
+                <button class="submit-btn">Login</button>
+                <p>Don't have an account? <a href="#" onclick="switchForm('signup')">Sign up</a></p>
+            </div>
+            <div id="signupForm" class="form-section hidden">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Username" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button class="submit-btn">Sign Up</button>
+                <p>Already have an account? <a href="#" onclick="switchForm('login')">Login</a></p>
+            </div>
+        </div>
+    </div>
+    <main>
+        <!--hero section -->
+        <section id="home-section" class="hero">
+            <div class="hero-content">
+                <h1>Book Your Train Tickets Online</h1>
+                <p>Search, compare and book train tickets easily</p>
+                <div class="hero-search">
+                    <div class="search-box">
+                        <div class="input-group">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" id="hero-from" placeholder="From Station" title="Enter Source Station">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" id="hero-to" placeholder="To Station" title="Enter Destination Station">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-calendar"></i>
+                            <input type="date" id="hero-date" placeholder="Select Date" title="Select Journey Date">
+                        </div>
+                    </div>
+                    <button class="search-btn">Search Trains</button>
+                </div>
+            </div>
+            <!--for opacity-->
+            <div class="hero-overlay"></div>
+        </section>
+        <!--features section-->
+        <section class="features-section">
+            <h2>Explore More With Journey</h2>
+            <div class="feactures-grid">
+                <div class="feature-card">
+                    <a href="functions/Running-Status.html">
+                        <i class="hgi hgi-stroke hgi-train-02"></i>
+                        <h4>Running Status</h4>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <a href="functions/pnr.html">
+                        <i class="hgi hgi-stroke hgi-coupon-percent"></i>
+                        <h4>PNR Status Enquiry</h4>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <a href="functions/seat.html">
+                        <i class="hgi hgi-stroke hgi-airplane-seat"></i>
+                        <h4>Train Seat Availability</h4>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <a href="functions/train-search.html">
+                        <i class="hgi hgi-stroke hgi-search-02"></i>
+                        <h4>Search By Name/Number</h4>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <a href="functions/station.html">
+                        <i class="hgi hgi-stroke hgi-speed-train-02"></i>
+                        <h4>Search Station</h4>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <a href="functions/vande.html">
+                        <i class="hgi hgi-stroke hgi-speed-train-02"></i>
+                        <h4>Vande Bharat Express</h4>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <a href="functions/food.html">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <h4>IRCTC Food Booking</h4>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <a href="functions/platform.html">
+                        <i class="hgi hgi-stroke hgi-ticket-01"></i>
+                        <h4>Platform Ticket</h4>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--benefits section-->
+        <section class="benefits">
+            <h2>Why Book IRCTC Trains with Journey ?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>Easy Booking</h3>
+                    <p>Book your tickets in just a few clicks</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Real-time Status</h3>
+                    <p>Check train status instantly</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Payment</h3>
+                    <p>Safe and secure payment options</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Round the clock customer support</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="hgi hgi-stroke hgi-wallet-02"></i>
+                    <h3>Instant Refund & Cancellation</h3>
+                    <p>Get an instant refund and book your next Train ticket easily.</p>
+                </div>
+            </div>
+        </section>
+        <!--questions-->
+        <section class="frequent-questions">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>Q. How can I create an IRCTC account login ID?</h3>
+                    <p>A: To create a new IRCTC login ID, visit the official home page of IRCTC. Right below the login
+                        box, there is an option to sign up. When you click on it, a registration box will open.
+                        Now
+                        enter your user ID, password, security question, and preferred language, followed by personal
+                        information like name, gender, Aadhaar card number, PAN card number and your residential
+                        address. After you enter all the information, click on submit. For the verification of your
+                        IRCTC login account, a link will be sent to your registered email ID. Once the registration
+                        process is complete you can use your IRCTC account.</p>
+                </div>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>Q. Can I change my IRCTC login ID?</h3>
+                    <p>A: For IRCTC login, open the ixigo app and just log in using your registered username. Next,
+                        select the departure and arrival destinations, date of travel, the class you want to travel in,
+                        and your traveller details. Then, click on 'Pay Now' to complete the payment. Once it is
+                        successful, the app will ask you to enter your password to complete your booking.</p>
+                </div>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>Q. What is the maximum number of IRCTC train tickets one can book at a time?</h3>
+                    <p>A: As per IRCTC, up to 12 bookings are allowed per month and up to 6 seats/berths can be booked
+                        per ticket. So, up to 36 tickets can be booked in a month from a single IRCTC User ID.</p>
+                </div>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>Q. How can I recover my IRCTC user ID and password?</h3>
+                    <p> A: You can find your login details in the IRCTC welcome message sent to your registered email.
+                        To locate this mail, use search terms like 'iRCTC' or 'ticketadmin@irctc.co.in' in your inbox.
+                        If you don't have this mail and wish to reset your password, go to the IRCTC website, then log
+                        in and then click on Forgot Password. Submit the required details and enter the OTP received via
+                        email/SMS to be led to a new page. Enter your new password here, and click on 'Update
+                        Password'to complete the process. Your username can be recovered similarly, by visiting
+                        irctc.co.in. Then Login and click on Forgot User ID. The existing user ID will be sent to your
+                        registered email.</p>
+                </div>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>Q. How can I book railway tickets by mobile?</h3>
+                    <p>A: If a railway booking is confirmed, it can be cancelled up to 48 hours before the scheduled
+                        departure of the train. As per the IRCTC website, tickets booked online cannot be
+                        cancelled
+                        after the chart has been prepared.</p>
+                </div>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>Q. Are children charged for IRCTC train ticket booking?</h3>
+                    <p>A: Children under 5 years of age are not charged for a train journey. Children between 5 to 12
+                        years of age are charged fully if you have opted for a berth separately. However, if a
+                        berth/seat is not required for a child between 5 to 12 years of age, then only half of the adult
+                        traveller fare will be applicable.</p>
+                </div>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>Q. What is TDR in your IRCTC train ticket?</h3>
+                    <p>A: TDR refers to the ticket deposit receipt. Passengers who have a ticket but have not travelled,
+                        and want to apply for a refund, can file for a TDR. The IRCTC provides facilities to file TDR
+                        online. If the train chart is not prepared, users can cancel their ticket online. It is only
+                        after a chart is ready that a TDR needs to be filed for a refund. Some different scenarios where
+                        an IRCTC TDR can be filed are:</p>
+                    <ul>
+                        <li>AC failure in train coaches.</li>
+                        <li> No room for passengers after chart preparation.</li>
+                        <li> Change in reservation status from confirmed to Waitlisted/Part Waitlisted/RAC after chart
+                            preparation.</li>
+                        <li>Fare difference if the passenger travelled in a lower class.</li>
+                        <li>Fare difference in case a proper coach is not attached.</li>
+                        <li>Passenger could not cancel because the chart was prepared at the originating
+                            station or a
+                            previous remote location.</li>
+                        <li>Partially Confirmed/Waitlisted tickets, but all passengers did not travel.</li>
+                        <li>Partially Confirmed/Waitlisted tickets and waitlisted passengers did not travel.</li>
+                        <li>Passengers partially travelled, before the journey was terminated short of destination.</li>
+                        <li>Passenger did not travel as reservation was provided in a lower class.</li>
+                        <li>Passenger did not travel due to the RAC ticket after chart preparation.</li>
+                        <li>Train being diverted, so it cannot touch the boarding station.</li>
+                        <li>Train being diverted, so it cannot touch the destination station.</li>
+                        <li>Train was more than 3 hours late and the passengers were not travelling on it.</li>
+                        <li>Train missed as the connecting train was late.</li>
+                        <li> Train terminated before the destination.</li>
+                        <li>Incorrectly charged by the TTE.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="popular-routes">
+            <h2 id="popular-routes">Popular Routes</h2>
+            <div class="routes-grid">
+                <!-- Example for Goa Trains -->
+                <div class="route-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/tDQhlPgGvTKSyLLeLVU15CP5N4wwiyiV81fBSzl pnck.jpg"
+                        alt="Scenic view of Goa" class="train-image">
+                    <div class="route-info">
+                        <h2 class="train-title">Goa Trains</h2>
+                        <p>From:
+                            <a href="#" class="train-location">Mumbai</a> •
+                            <a href="#" class="train-location">Bengaluru</a> •
+                            <a href="#" class="train-location">New Delhi</a> •
+                            <a href="#" class="train-location">Pune</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Mumbai Trains -->
+                <div class="route-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/2NklGpGOSujuEZ31YvgfGC_paP3bMm1M1giOwd INldI.jpg"
+                        alt="Mumbai CST" class="train-image">
+                    <div class="route-info">
+                        <h2 class="train-title">Mumbai Trains</h2>
+                        <p>From:
+                            <a href="#" class="train-location">Pune</a> •
+                            <a href="#" class="train-location">New Delhi</a> •
+                            <a href="#" class="train-location">Ahmedabad</a> •
+                            <a href="#" class="train-location">Surat</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- New Delhi Trains -->
+                <div class="route-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/yDvjAOeAMwH6UojUet9WILoEj8HRTYhgQCF5Z WXj2XM.jpg"
+                        alt="India Gate in New Delhi" class="train-image">
+                    <div class="route-info">
+                        <h2 class="train-title">New Delhi Trains</h2>
+                        <p>From:
+                            <a href="#" class="train-location">Mumbai</a> •
+                            <a href="#" class="train-location">Jaipur</a> •
+                            <a href="#" class="train-location">Bengaluru</a> •
+                            <a href="#" class="train-location">Chandigarh</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Bengaluru Trains -->
+                <div class="route-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/Ju7QhlVDbn2HJx1M51qXNQ4tJnVnSyTncu_2o70 DDCY.jpg"
+                        alt="Vidhana Soudha in Bengaluru" class="train-image">
+                    <div class="route-info">
+                        <h2 class="train-title">Bengaluru Trains</h2>
+                        <p>From:
+                            <a href="#" class="train-location">Mumbai</a> •
+                            <a href="#" class="train-location">Chennai</a> •
+                            <a href="#" class="train-location">Delhi</a> •
+                            <a href="#" class="train-location">Hyderabad</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Kolkata Trains -->
+                <div class="route-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/VDiqPPJlZxY0-5BuDFu2IFSPyO5hejrwn_a-LbU-41g.jpg"
+                        alt="Howrah Bridge in Kolkata" class="train-image">
+                    <div class="route-info">
+                        <h2 class="train-title">Kolkata Trains</h2>
+                        <p>From:
+                            <a href="#" class="train-location">Mumbai</a> •
+                            <a href="#" class="train-location">Delhi</a> •
+                            <a href="#" class="train-location">Bengaluru</a> •
+                            <a href="#" class="train-location">Guwahati</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Pune Trains -->
+                <div class="route-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/tTn2R11Mmr1V4xfZpT3rgPho4CIteXjq62gWryP_dQ.jpg"
+                        alt="Shaniwar Wada in Pune" class="train-image">
+                    <div class="route-info">
+                        <h2 class="train-title">Pune Trains</h2>
+                        <p>From:
+                            <a href="#" class="train-location">Mumbai</a>
+                            <a href="#" class="train-location">Delhi</a>
+                            <a href="#" class="train-location">Bengaluru</a>
+                            <a href="#" class="train-location">Nagpur</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Hyderabad Trains -->
+                <div class="route-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/lPWcI485ofzDhzmUUsjOkrMJUXw1ezdh-6x5bR1U-VA.jpg"
+                        alt="Charminar in Hyderabad" class="train-image">
+                    <div class="route-info">
+                        <h2 class="train-title">Hyderabad Trains</h2>
+                        <p>From:
+                            <a href="#" class="train-location">Mumbai</a> •
+                            <a href="#" class="train-location">Chennai</a> •
+                            <a href="#" class="train-location">Pune</a> •
+                            <a href="#" class="train-location">Delhi</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Chennai Trains -->
+                <div class="route-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/vojCa5s8PVUiroRn_UHuAEx3p4HVQ-Li1b6j28OFcU.jpg"
+                        alt="Kapaleeshwarar Temple in Chennai" class="train-image">
+                    <div class="route-info">
+                        <h2 class="train-title">Chennai Trains</h2>
+                        <p>From:
+                            <a href="#" class="train-location">Bengaluru</a> •
+                            <a href="#" class="train-location">Delhi</a> •
+                            <a href="#" class="train-location">Madurai</a> •
+                            <a href="#" class="train-location">Coimbatore</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Jaipur Trains -->
+                <div class="route-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/xZgp__MwSWplMEXdL5KcIRXK8o3ldGDKxdED DkhmL7U.jpg"
+                        alt="Hawa Mahal in Jaipur" class="train-image">
+                    <div class="route-info">
+                        <h2 class="train-title">Jaipur Trains</h2>
+                        <p>From:
+                            <a href="#" class="train-location">Mumbai</a>
+                            <a href="#" class="train-location">New Delhi</a>
+                            <a href="#" class="train-location">Jodhpur</a>
+                            <a href="#" class="train-location">Kota</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Train news section-->
+        <section class="Train-news">
+            <h2>IRCTC Train News</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <a href="https://www.ixigo.comindian-railways-plans-direct-vande-bharat-linkbetween-mumbai-and-mangaluru-story-1185266"
+                            target="_blank">
+                            <img src="https://blog-content.ixigo.com/wp-content/uploads/2025/03/Mangaluru-.jpeg"
+                                alt="Mumbai-Mangaluru Link">
+                            <span class="slide-caption">Indian Railways Plans Direct Vande Bharat Link Between
+                                Mumbai and Mangaluru</span>
+                        </a>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <a href="https://www.ixigo.com/railways-to-operate-78-special-trains-to-clear-postholi-travel-rush-story-1185248"
+                            target="_blank">
+                            <img src="https://blog-content.ixigo.com/wpcontent/uploads/2025/03/30March2023-Trains.jpeg"
+                                alt="Post-Holi Rush">
+                            <span class="slide-caption">Railways to Operate 78 Special Trains to Clear PostHoli
+                                Travel
+                                Rush</span>
+                        </a>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <a href="https://www.ixigo.com/railways-launches-extra-holi-special-trains-story-1185242"
+                            target="_blank">
+                            <img src="https://blog-content.ixigo.com/wp-content/uploads/2025/03/HoliTrains.jpg">
+                            <span class="slide-caption">Planning to Travel During
+                                Holi? Railways Launches Extra Holi Special Trains!</span>
+                        </a>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <a href="https://www.ixigo.com/holi-hai-indian-railways-introduces-special-trains-for-the-festive-rush-story-1185228"
+                            target="_blank">
+                            <img src="https://blog-content.ixigo.com/wpcontent/uploads/2025/03/3Aug22.jpeg"
+                                alt="Holi Hai! Indian Railways Introduces Special Trains for the Festive Rush"
+                                title="Holi Hai! Indian Railways Introduces Special Trains for the Festive Rush">
+                            <span class="slide-caption">Railways to Operate 78 Special Trains to Clear PostHoli
+                                Travel
+                                Rush</span>
+                        </a>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="carousel-slide">
+                        <a href="https://www.ixigo.com/indian-railways-introduces-over-50-special-trains-forholi-travel-story-1185202"
+                            target="_blank">
+                            <img src="https://blog-content.ixigo.com/wp-content/uploads/2025/03/26thDec.jpg"
+                                alt="Indian Railways Introduces Over 50 Special Trains for Holi Travel!"
+                                title="Indian Railways Introduces Over 50 Special Trains for Holi Travel!">
+                            <span class="slide-caption">Indian Railways Introduces
+                                Over 50 Special Trains for Holi Travel!</span>
+                        </a>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="carousel-slide">
+                        <a href="https://www.ixigo.com/holi-special-trains-railways-announces-services-onmajor-story-1185191"
+                            target="_blank">
+                            <img src="https://blog-content.ixigo.com/wp-content/uploads/2025/03/Trains-20-Sept-1.jpeg"
+                                alt="Holi Special Trains: Railways Announces Services on Major Routes!"
+                                title="Holi Special Trains: Railways Announces Services on Major Routes!">
+                            <span class="slide-caption">Holi Special Trains:
+                                Railways Announces Services on Major Routes!</span>
+                        </a>
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="carousel-slide">
+                        <a href="https://www.ixigo.com/railways-announces-major-train-cancellationsdiversions-story-1185184"
+                            target="_blank">
+                            <img src="https://blog-content.ixigo.com/wp-content/uploads/2025/02/6OctTrains.jpeg"
+                                alt="Railways Announces Major Train Cancellations &amp;#038; Route Diversions!"
+                                title="Railways Announces Major Train Cancellations &amp;#038; Route Diversions!">
+                            <span class="slide-caption">Holi Special Trains:
+                                Railways Announces Services on Major Routes!</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            <!-- Top Section - Quick Links -->
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/trains">Search Trains</a></li>
+                        <li><a href="functions/train-search.html">Booking Status</a></li>
+                        <li><a href="/cancel-ticket">Cancel Ticket</a></li>
+                        <li><a href="functions/pnr.html">PNR Status</a></li>
+                        <li><a href="/train-schedule">Train Schedule</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/contact-us">Contact Us</a></li>
+                        <li><a href="/faq">FAQs</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-conditions">Terms & Conditions</a></li>
+                        <li><a href="/refund-policy">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Trains</h3>
+                    <ul>
+                        <li><a href="/train/rajdhani">Rajdhani Express</a></li>
+                        <li><a href="/train/shatabdi">Shatabdi Express</a></li>
+                        <li><a href="/train/duronto">Duronto Express</a></li>
+                        <li><a href="/train/garib-rath">Garib Rath</a></li>
+                        <li><a href="/train/vande-bharat">Vande Bharat Express</a></li>
+                        <li><a href="/train/local">Local/Suburban Trains</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Routes</h3>
+                    <ul>
+                        <li><a href="/route/delhi-mumbai">Delhi to Mumbai</a></li>
+                        <li><a href="/route/chennai-bangalore">Chennai to Bangalore</a></li>
+                        <li><a href="/route/kolkata-delhi">Kolkata to Delhi</a></li>
+                        <li><a href="/route/hyderabad-chennai">Hyderabad to Chennai</a></li>
+                        <li><a href="/route/mumbai-goa">Mumbai to Goa</a></li>
+                        <li><a href="/route/bangalore-cochin">Bangalore to Kochi</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Middle Section - Payment & Contact -->
+            <div class="footer-middle">
+                <div class="payment-methods">
+                    <h3>Payment Methods</h3>
+                    <div class="payment-icons">
+                        <img src="images/visa.png" alt="Visa">
+                        <img src="images/master.png" alt="Mastercard">
+                        <img src="images/rupay.png" alt="RuPay">
+                        <img src="images/upi.jpeg" alt="UPI">
+                        <img src="images/net.png" alt="Net Banking">
+                        <img src="images/ptm.png" alt="Paytm">
+                        <img src="images/gpay.png" alt="Google Pay">
+                        <img src="images/phonepe.png" alt="PhonePe">
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> Customer Care: 1800 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> Email: support@traintickets.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Corporate Office: 123 Railway Plaza, New Delhi - 110001</p>
+                </div>
+            </div>
+
+            <!-- Bottom Section - Social & Copyright -->
+            <div class="footer-bottom">
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="newsletter">
+                    <h3>Subscribe to Newsletter</h3>
+                    <form>
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="download-app">
+                    <h3>Download Our App</h3>
+                    <div class="app-stores">
+                        <a href="https://play.google.com/store/games?hl=en_IN"><img src="images/gplay.png"
+                                alt="Google Play"></a>
+                        <a href="https://www.apple.com/in/store?cid=aos-IN-kwgo-brand"><img src="images/apple.png"
+                                alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 TrainTicketBooking.com. All Rights Reserved.</p>
+                <p>An IRCTC Authorized Partner</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,898 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+    background-color: #e74c3c;
+    background-image: url('logo/logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.nav-links li a i {
+    display: relative;
+    top: 2px;
+    margin-right: 5px;
+    align-content: center;
+}
+
+.nav-links li a {
+    font-weight: 600;
+    transition: color 0.3s;
+    align-content: center;
+}
+
+.nav-links li a:hover {
+    color: #e74c3c;
+}
+
+#loginBtn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#loginBtn:hover {
+    background-color: #c0392b;
+}
+
+/* login/ sign pup up */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s ease-in-out;
+    z-index: 9999;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar-content {
+    padding: 30px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn {
+    font-size: 24px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.submit-btn {
+    padding: 10px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 500px;
+    width: 99%;
+    background-image: url('hero/hero2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-search {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c8d;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.search-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Features Section */
+.features-section {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.features-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.feactures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.feature-card h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 60px 0;
+    background-color: #fff;
+    /* border-top: 1px solid #b7b7b7; */
+    /* border: 2px solid #b7b7b7; */
+    border-radius: 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.benefits h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.benefit-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.benefit-card p {
+    color: #7f8c8d;
+}
+
+/* FAQ Section */
+.frequent-questions {
+    padding: 60px 0;
+    background-color: #fff;
+    /* border-top: 1px solid #b7b7b7; */
+    /* border: 2px solid #b7b7b7; */
+    border-radius: 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.frequent-questions h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.faq-grid {
+    max-width: 1400px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+}
+
+.faq-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.faq-card h3 {
+    color: #e74c3c;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.faq-card p {
+    margin-bottom: 10px;
+}
+
+.faq-card ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.faq-card ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+
+/* Popular Routes Section */
+.popular-routes {
+    font-family: Arial, sans-serif;
+    padding: 60px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#popular-routes {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.routes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3  columns */
+    grid-template-rows: repeat(3, auto);   /* 3 rows based on content */
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.route-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding-left: 15px;
+    
+}
+
+/*  Hover effect */
+.route-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.train-image {
+    width: 4rem;
+    /* height: 6rem; */
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.route-info {
+    padding: 1rem;
+}
+
+.train-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.train-location {
+    color: #2563eb;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+/* Hover effect on l */
+.train-location:hover {
+    color: #1e40af;
+}
+/*  Responsive Grid for Mobile */
+@media (max-width: 900px) {
+    .routes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .routes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Train News Section */
+.Train-news {
+   padding: 40px 0;
+    background-color: #fff;
+    /* border-top: 1px solid #b7b7b7; */
+    /* border: 2px solid #b7b7b7; */
+    border-radius: 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Train-news h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.carousel-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;                            /* Horizontal layout */
+    transition: transform 0.5s ease;          /* Smooth movement */
+    gap: 20px;                                /* Space between items */
+    padding-bottom: 20px;                     /* Spacing below carousel */
+    overflow-x: auto;                         /* Enable horizontal scroll */
+    scroll-snap-type: x mandatory;            /* Snap scrolling! */
+    -webkit-overflow-scrolling: touch;        /* Helps iOS, ignored by others */
+}
+
+
+.carousel-slide {
+    flex: 0 0 calc(33.333% - 20px);
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slide-caption {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 40px 0 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.footer-section h3 {
+    color: #f39c12;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f39c12;
+}
+
+.footer-middle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #34495e;
+    border-bottom: 1px solid #34495e;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.payment-methods, .contact-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 0 15px;
+}
+
+.payment-methods h3, .contact-info h3 {
+    color: #f39c12;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.payment-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.payment-icons img {
+    height: 30px;
+    width: auto;
+    /* filter: grayscale(100%) brightness(150%); */
+    transition: filter 0.3s;
+}
+
+.payment-icons img:hover {
+    filter: none;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #f39c12;
+    width: 20px;
+    text-align: center;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.social-media, .newsletter, .download-app {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.social-media h3, .newsletter h3, .download-app h3 {
+    color: #f39c12;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #bdc3c7;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f39c12;
+}
+
+.newsletter form {
+    display: flex;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.newsletter button {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #e67e22;
+}
+
+.app-stores {
+    display: flex;
+    gap: 10px;
+}
+
+.app-stores img {
+    height: 40px;
+    width: auto;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+    color: #bdc3c7;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .input-group {
+        min-width: 100%;
+    }
+    
+    .footer-section, .payment-methods, .contact-info, 
+    .social-media, .newsletter, .download-app {
+        flex: 100%;
+        text-align: center;
+    }
+    
+    .payment-icons, .social-icons, .app-stores {
+        justify-content: center;
+    }
+    
+    .newsletter form {
+        flex-direction: column;
+    }
+    
+    .newsletter input, .newsletter button {
+        border-radius: 4px;
+        margin-bottom: 5px;
+    }
+    
+    .carousel-slide {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .carousel-slide {
+        flex: 0 0 100%;
+    }
+}
+/* Mobile Navigation */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+}
+
+.error {
+    border: 2px solid #e74c3c !important;
+}
+
+/* Active FAQ Card */
+.faq-card.active {
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Carousel Controls */
+.carousel-container {
+    position: relative;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.input-error {
+    border-color: red !important;
+    outline: none;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .carousel-slide {
+        flex: 0 0 100%;
+    }
+}
